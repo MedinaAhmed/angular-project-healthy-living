@@ -1,5 +1,5 @@
 import { Food } from './app/shared/models/Food';
-//import { Tag } from './app/shared/models/Tag';
+import { Tag } from './app/shared/models/Tag';
 
 export const sample_foods: Food[] = [
   {
@@ -92,13 +92,13 @@ export const sample_foods: Food[] = [
   },
 ];
 
-// export const sample_tags:Tag[] = [
-//   { name: 'All', count: 6 },
-//   { name: 'FastFood', count: 4 },
-//   { name: 'Pizza', count: 2 },
-//   { name: 'Lunch', count: 3 },
-//   { name: 'SlowFood', count: 2 },
-//   { name: 'Hamburger', count: 1 },
-//   { name: 'Fry', count: 1 },
-//   { name: 'Soup', count: 1 },
-// ]
+export const sample_tags: Tag[] = [
+  { name: 'All', count: 8 },
+  { name: 'Breakfast', count: 3 },
+  { name: 'Pizza', count: 1 },
+  { name: 'Lunch', count: 1 },
+  { name: 'Keto', count: 2 },
+  { name: 'Smoothie', count: 2 },
+  { name: 'Dessert', count: 2 },
+  { name: 'Detox', count: 1 },
+];
