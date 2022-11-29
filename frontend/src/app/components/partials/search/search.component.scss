@@ -26,11 +26,10 @@ div button {
   border: none;
   background-color: #488664;
   color: white;
-  opacity: 0.8;
   outline: none;
 }
 
 div button:hover {
-  opacity: 1;
+  background-color: #63ab83;
   cursor: pointer;
 }
