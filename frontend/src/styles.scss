@@ -22,3 +22,6 @@ body {
 a {
   text-decoration: none;
 }
+.star.on {
+  color: #3d7255 var(--checkedColor) !important;
+}
