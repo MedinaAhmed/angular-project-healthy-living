@@ -59,14 +59,14 @@ export const sample_foods: Food[] = [
   },
   {
     id: '6',
-    name: 'Smoothie Strawberry',
+    name: 'Smoothie Detox',
     price: 9,
     cookTime: '10-20',
     favorite: false,
     origins: ['italy'],
     stars: 4.0,
-    imageUrl: 'assets/smoothie-strawberry.jpg',
-    tags: ['Breakfast', 'Smoothie', 'Strawberry'],
+    imageUrl: 'assets/smothie-detox-min.jpg',
+    tags: ['Breakfast', 'Smoothie', 'Detox'],
   },
   {
     id: '7',
