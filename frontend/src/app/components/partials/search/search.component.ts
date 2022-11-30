@@ -4,7 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.scss'],
+  styleUrls: ['./search.component.css'],
 })
 export class SearchComponent implements OnInit {
   searchTerm = '';
@@ -13,10 +13,10 @@ export class SearchComponent implements OnInit {
       if (params.searchTerm) this.searchTerm = params.searchTerm;
     });
   }
+
   ngOnInit(): void {}
 
   search(term: string): void {
-    if (term)
-     this.router.navigateByUrl('/search/' + term);
+    if (term) this.router.navigateByUrl('/search/' + term);
   }
 }

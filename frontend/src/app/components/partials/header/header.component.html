@@ -1,7 +1,11 @@
 <header>
   <div class="container">
     <a routerLink="/" class="logo"
-      ><img src="///assets/healthy-living-min.png" alt="healthy-living"
+      ><img
+        src="../../../../assets/healthy-living-logo-min.png"
+        height="60px"
+        width="200px"
+        alt="healthy-living"
     /></a>
 
     <nav>
@@ -18,7 +22,9 @@
           </div>
         </li>
         <li>
-          <a routerLink="/cart-page">Cart <span>3</span></a>
+          <a routerLink="/cart-page"
+            >Cart <span *ngIf="cartQuantity">{{ cartQuantity }}</span></a
+          >
         </li>
       </ul>
     </nav>
