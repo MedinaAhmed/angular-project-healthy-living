@@ -38,6 +38,9 @@ export class CartService {
   getCartObservable(): Observable<Cart> {
     return this.cartSubject.asObservable();
   }
+  getCart(): Cart {
+    return this.cartSubject.value;
+  }
   //local storage to hold our data
   private setCartToLocalStorage(): void {
     //sum of price and quantity
