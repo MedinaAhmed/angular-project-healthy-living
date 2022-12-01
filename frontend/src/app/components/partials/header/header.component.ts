@@ -12,12 +12,18 @@ export class HeaderComponent {
   //dynamic cart
   cartQuantity = 0;
   user!: User;
-  constructor(cartService: CartService, userService: UserService) {
+  constructor(cartService: CartService, private userService: UserService) {
     cartService.getCartObservable().subscribe((newCart) => {
       this.cartQuantity = newCart.totalCount;
     });
     userService.userObservable.subscribe((newUser) => {
       this.user = newUser;
     });
+  }
+  logout() {
+    this.userService.logout;
+  }
+  get isAuth() {
+    return this.user.token;
   }
 }
