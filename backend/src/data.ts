@@ -19,7 +19,7 @@ export const sample_foods: any[] = [
     origins: ["persia", "middle east", "china"],
     stars: 4.7,
     imageUrl: "assets/oat-brekfast.jpg",
-    tags: ["Oats", "BreakFast"],
+    tags: ["Oats", "Breakfast"],
   },
   {
     id: "3",
