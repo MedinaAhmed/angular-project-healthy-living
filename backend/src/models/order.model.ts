@@ -22,7 +22,7 @@ export interface Order {
   address: string;
   paymentId: string;
   status: OrderStatus;
-  user: Types.ObjectId; //key
+  user: Types.ObjectId;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -38,14 +38,13 @@ const orderSchema = new Schema<Order>(
     user: { type: Schema.Types.ObjectId, required: true },
   },
   {
-    timestamps: true, //genrate autmotaclly created and updted
+    timestamps: true,
     toJSON: {
       virtuals: true,
     },
     toObject: {
       virtuals: true,
     },
-    //id instead of _id
   }
 );
 

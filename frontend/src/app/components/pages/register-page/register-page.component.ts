@@ -8,7 +8,7 @@ import { PasswordsMatchValidator } from 'src/app/shared/validators/password_matc
 @Component({
   selector: 'app-register-page',
   templateUrl: './register-page.component.html',
-  styleUrls: ['./register.component.scss'],
+  styleUrls: ['./register-page.component.scss'],
 })
 export class RegisterPageComponent implements OnInit {
   registerForm!: FormGroup;
@@ -25,20 +25,20 @@ export class RegisterPageComponent implements OnInit {
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group(
       {
-        name: ['', [Validators.required, Validators.minLength(2)]],
+        name: ['', [Validators.required, Validators.minLength(5)]],
         email: ['', [Validators.required, Validators.email]],
-        password: ['', [Validators.required, Validators.minLength(4)]],
+        password: ['', [Validators.required, Validators.minLength(5)]],
         confirmPassword: ['', Validators.required],
-        address: ['', [Validators.required, Validators.minLength(4)]],
+        address: ['', [Validators.required, Validators.minLength(10)]],
       },
       {
         validators: PasswordsMatchValidator('password', 'confirmPassword'),
       }
     );
 
-    this.returnUrl = this.activatedRoute.snapshot.queryParams.returnUrl; //anythime
+    this.returnUrl = this.activatedRoute.snapshot.queryParams.returnUrl;
   }
-  //
+
   get fc() {
     return this.registerForm.controls;
   }
@@ -55,7 +55,7 @@ export class RegisterPageComponent implements OnInit {
       confirmPassword: fv.confirmPassword,
       address: fv.address,
     };
-    //register is succesfull
+
     this.userService.register(user).subscribe((_) => {
       this.router.navigateByUrl(this.returnUrl);
     });

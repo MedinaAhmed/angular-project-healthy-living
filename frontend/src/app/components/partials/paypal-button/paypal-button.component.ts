@@ -36,7 +36,7 @@ export class PaypalButtonComponent implements OnInit {
             purchase_units: [
               {
                 amount: {
-                  currency_code: 'BGN',
+                  currency_code: 'USD',
                   value: self.order.totalPrice,
                 },
               },

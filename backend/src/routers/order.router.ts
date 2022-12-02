@@ -13,7 +13,7 @@ router.post(
   asyncHandler(async (req: any, res: any) => {
     const requestOrder = req.body;
 
-    if (requestOrder.items.length <= 0) {
+    if (requestOrder.item.length <= 0) {
       res.status(HTTP_BAD_REQUEST).send("Cart Is Empty!");
       return;
     }
@@ -32,7 +32,10 @@ router.post(
 router.get(
   "/newOrderForCurrentUser",
   asyncHandler(async (req: any, res) => {
-    const order = await getNewOrderForCurrentUser(req);
+    const order = await OrderModel.findOne({
+      user: req.user.id,
+      status: OrderStatus.NEW,
+    });
     if (order) res.send(order);
     else res.status(HTTP_BAD_REQUEST).send();
   })
