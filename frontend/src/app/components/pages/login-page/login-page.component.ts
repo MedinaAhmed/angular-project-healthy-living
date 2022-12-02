@@ -18,29 +18,26 @@ export class LoginPageComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private router: Router
   ) {}
+
   ngOnInit(): void {
-    //building form
     this.loginForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
     });
 
-    this.returnUrl = this.activatedRoute.snapshot.queryParams.returnUrl; //get the latest value
+    this.returnUrl = this.activatedRoute.snapshot.queryParams.returnUrl;
   }
-  //property that help us // loginForms.controls.email
+
   get fc() {
     return this.loginForm.controls;
   }
+
   submit() {
     this.isSubmitted = true;
     if (this.loginForm.invalid) return;
-    alert(`email: ${this.fc.email.value}, password: ${this.fc.password.value}`);
 
     this.userService
-      .login({
-        email: this.fc.email.value,
-        password: this.fc.password.value,
-      })
+      .login({ email: this.fc.email.value, password: this.fc.password.value })
       .subscribe(() => {
         this.router.navigateByUrl(this.returnUrl);
       });
