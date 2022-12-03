@@ -8,6 +8,7 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { LoginPageComponent } from './components/pages/login-page/login-page.component';
 import { OrderTrackingPageComponent } from './components/pages/order-tracking-page/order-tracking-page.component';
 import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
+import { ProfilePageComponent } from './components/pages/profile-page/profile-page.component';
 import { RegisterPageComponent } from './components/pages/register-page/register-page.component';
 
 const routes: Routes = [
@@ -42,17 +43,21 @@ const routes: Routes = [
   {
     path: 'checkout',
     component: CheckoutPageComponent,
-    //canActivate: [AuthGuard],
+    canActivate: [AuthGuard],
   },
   {
     path: 'payment',
     component: PaymentPageComponent,
-    //canActivate: [AuthGuard],
+    canActivate: [AuthGuard],
   },
   {
     path: 'track/:orderId',
     component: OrderTrackingPageComponent,
-    //canActivate: [AuthGuard],
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'profile',
+    component: ProfilePageComponent,
   },
 ];
 
