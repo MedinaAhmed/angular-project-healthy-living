@@ -29,6 +29,7 @@ import { AuthInterceptor } from './auth/auth.interceptor';
 import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
 import { PaypalButtonComponent } from './components/partials/paypal-button/paypal-button.component';
 import { OrderTrackingPageComponent } from './components/pages/order-tracking-page/order-tracking-page.component';
+import { FooterComponent } from './components/partials/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { OrderTrackingPageComponent } from './components/pages/order-tracking-pa
     PaymentPageComponent,
     PaypalButtonComponent,
     OrderTrackingPageComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
