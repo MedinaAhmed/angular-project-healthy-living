@@ -9,5 +9,9 @@ import { User } from 'src/app/shared/models/User';
 })
 export class ProfilePageComponent {
   user!: User;
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService) {
+    userService.userObservable.subscribe((newUser) => {
+      this.user = newUser;
+    });
+  }
 }
