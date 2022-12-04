@@ -160,7 +160,7 @@
         4.  Add Auth Guard
     7.  Save Order
         1. Add Order Model
-        2. Add Order Status Enum
+        2. Add Order Status 
         3. Add Auth Middleware
         4. Add Order Router
            1. Add create API
@@ -194,14 +194,12 @@
     4.  Add HTML
     5.  Add CSS
 
-19. Deploy On Heroku
-    1.  OutputPath in angular.json
-    2.  package.json
-        1.  frontend
-        2.  backend
-        3.  root
-    3.  BASE_URL in urls.ts
-    4.  Public folder config in server.ts
-    5.  Run commands
-    6.  Add built folder to .gitignore
-    7.  Commit and Push
+19. Adding Profile page
+   1.Generate Component
+      1.Add to routes
+   2. Edit profile.component.ts
+   3. Add HTML
+   4. Add CSS
+   
+20.Adding Slider
+      
