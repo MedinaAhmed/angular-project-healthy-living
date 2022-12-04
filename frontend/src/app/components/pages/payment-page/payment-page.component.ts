@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { OrderService } from 'src/app/services/order.service';
 import { Order } from 'src/app/shared/models/Order';
@@ -8,7 +8,7 @@ import { Order } from 'src/app/shared/models/Order';
   templateUrl: './payment-page.component.html',
   styleUrls: ['./payment-page.component.scss'],
 })
-export class PaymentPageComponent {
+export class PaymentPageComponent implements OnInit {
   order: Order = new Order();
   constructor(orderService: OrderService, router: Router) {
     orderService.getNewOrderForCurrentUser().subscribe({
@@ -16,8 +16,10 @@ export class PaymentPageComponent {
         this.order = order;
       },
       error: () => {
-        router.navigateByUrl('/checkout');
+        router.navigateByUrl('/chekcout');
       },
     });
   }
+
+  ngOnInit(): void {}
 }

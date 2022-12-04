@@ -87,6 +87,17 @@ export const sample_foods: any[] = [
     imageUrl: "assets/dessert-candy.jpg",
     tags: ["Dessert"],
   },
+  {
+    id: "9",
+    name: "Muffin",
+    price: 5,
+    cookTime: "10-15",
+    favorite: false,
+    origins: ["bulgaria", "us"],
+    stars: 3.5,
+    imageUrl: "assets/dessert-muffin-min",
+    tags: ["Dessert"],
+  },
 ];
 
 export const sample_tags: any[] = [
