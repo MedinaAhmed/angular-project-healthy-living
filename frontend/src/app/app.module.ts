@@ -31,6 +31,7 @@ import { PaypalButtonComponent } from './components/partials/paypal-button/paypa
 import { OrderTrackingPageComponent } from './components/pages/order-tracking-page/order-tracking-page.component';
 import { FooterComponent } from './components/partials/footer/footer.component';
 import { ProfilePageComponent } from './components/pages/profile-page/profile-page.component';
+import { NgImageSliderModule } from 'ng-image-slider';
 
 @NgModule({
   declarations: [
@@ -65,6 +66,7 @@ import { ProfilePageComponent } from './components/pages/profile-page/profile-pa
     RatingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    NgImageSliderModule,
     ToastrModule.forRoot({
       timeOut: 3000,
       positionClass: 'toast-bottom-right',
