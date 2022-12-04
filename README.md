@@ -202,4 +202,5 @@
    4. Add CSS
    
 20.Adding Slider
-      
+   1.npm install ng-image-slider --save   
+   2. add image objects
