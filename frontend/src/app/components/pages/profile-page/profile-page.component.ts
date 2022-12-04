@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
 import { User } from 'src/app/shared/models/User';
 
@@ -9,9 +10,10 @@ import { User } from 'src/app/shared/models/User';
 })
 export class ProfilePageComponent {
   user!: User;
-  constructor(private userService: UserService) {
+  constructor(private userService: UserService, router: Router) {
     userService.userObservable.subscribe((newUser) => {
       this.user = newUser;
+      router.navigateByUrl('/login');
     });
   }
 }
