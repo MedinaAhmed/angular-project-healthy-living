@@ -204,3 +204,5 @@
 20.Adding Slider
    1.npm install ng-image-slider --save   
    2. add image objects
+   
+21.Deployoing on Heroku ---->  https://healthyliving.herokuapp.com/
