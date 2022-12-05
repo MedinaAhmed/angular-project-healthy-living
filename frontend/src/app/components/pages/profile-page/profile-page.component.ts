@@ -13,7 +13,8 @@ export class ProfilePageComponent {
   constructor(private userService: UserService, router: Router) {
     userService.userObservable.subscribe((newUser) => {
       this.user = newUser;
-      router.navigateByUrl('/login');
+      if (!this.user) router.navigateByUrl('/login');
+      else router.navigateByUrl('/profile');
     });
   }
 }

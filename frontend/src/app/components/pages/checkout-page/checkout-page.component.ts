@@ -29,10 +29,10 @@ export class CheckoutPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    let { name, adress } = this.userService.currentUser;
+    let { name, address } = this.userService.currentUser;
     this.checkoutForm = this.formBuilder.group({
       name: [name, Validators.required],
-      address: [adress, Validators.required],
+      address: [address, Validators.required],
     });
   }
 
