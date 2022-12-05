@@ -22,6 +22,7 @@
     "@ngmodule/material-carousel": "^0.6.0",
     "@types/jasmine": "~4.3.0",
     "@types/node": "^12.11.1",
+    "ng-chat": "^3.1.0",
     "ng-image-slider": "^6.1.0",
     "ng-starrating": "^1.0.20",
     "ngx-toastr": "^16.0.1",
