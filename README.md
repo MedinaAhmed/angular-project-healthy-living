@@ -205,15 +205,4 @@ For building my Anlgular E-commerce website I used:
     4.  Add HTML
     5.  Add CSS
 
-19. Adding Profile page
-      1.Generate Component
-         1.Add to routes
-      2. Edit profile.component.ts
-      3. Add HTML
-      4. Add CSS
-   
-20.Adding Slider
-   1.npm install ng-image-slider --save   
-   2. add image objects
-   
-21.Deployoing on Heroku ---->  https://healthyliving.herokuapp.com/
+
