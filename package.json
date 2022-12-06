@@ -8,10 +8,8 @@
   "scripts": {
     "start": "cd backend/built && node server.js",
     "prebuild": "cd backend &&npm run build",
-    "build": "cd frontend && npm run build",
-    "deploy": "gh-pages -d frontend && backend"
+    "build": "cd frontend && npm run build"
   },
-  "homepage": "https://medinaahmed.github.io/angular-project-healthy-living/",
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
     "@types/cors": "^2.8.12",
