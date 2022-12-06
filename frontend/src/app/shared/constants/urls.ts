@@ -1,5 +1,5 @@
 import { environment } from 'src/environments/environment';
-const BASE_URL = environment.production ? '' : 'http';
+const BASE_URL = environment.production ? '' : 'http://localhost:5000';
 
 export const FOOD_URL = BASE_URL + '/api/foods/';
 export const FOOD_TAGs_URL = FOOD_URL + '/tags/';
