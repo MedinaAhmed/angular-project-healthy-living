@@ -1,3 +1,15 @@
+For building my Anlgular E-commerce website I used:
+--Express Router for defining apis
+--Angular router- for navigation to different pages
+--MONGO DB Atlas - for storing and querying data
+--RXJS - to manage application data
+--JSON Web Token for authentication and othorization
+--REACT Forms & HTPP for send the data back and fore to apis
+--Using Paypal button for payment functunality
+--Lazy loading,Animation, Image Slider
+
+------------ROAD MAP---------
+
 1. Create Angular App
 
    1. Create project's folder
