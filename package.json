@@ -1,14 +1,17 @@
 {
   "name": "helthy-living",
   "version": "1.0.0",
+  "main:": "index.js",
   "engines": {
     "node": "14.21.1"
   },
   "scripts": {
     "start": "cd backend/built && node server.js",
     "prebuild": "cd backend &&npm run build",
-    "build": "cd frontend && npm run build"
+    "build": "cd frontend && npm run build",
+    "deploy": "gh-pages -d frontend && backend"
   },
+  "homepage": "https://medinaahmed.github.io/angular-project-healthy-living/",
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
     "@types/cors": "^2.8.12",
