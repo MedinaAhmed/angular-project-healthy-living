@@ -27,7 +27,7 @@ app.use(express.static("public"));
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html")); // join corectly on all operating system
 });
-const port = process.env.PORT || 5000;
+const port = process.env.PORT;
 app.listen(port, () => {
   console.log("Website served on http://localhost:" + port);
 });
