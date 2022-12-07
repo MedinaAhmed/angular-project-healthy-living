@@ -6,7 +6,7 @@ For building my Anlgular E-commerce website I used:
 --JSON Web Token for authentication and othorization
 --REACT Forms & HTPP for send the data back and fore to apis
 --Using Paypal button for payment functunality
---Lazy loading,Animation, Image Slider
+--AngularAnimation, Image Slider
 
 ------------ROAD MAP---------
 
