@@ -28,6 +28,7 @@ a:hover {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  margin-right: 30px;
 }
 a .logo {
   font-weight: bold;
@@ -50,6 +51,7 @@ a span {
   font-size: 0.9rem;
 }
 .menu-container {
+  font-size: 1.1rem;
   position: relative;
 }
 .menu {
@@ -64,4 +66,8 @@ a span {
 .menu a {
   width: 100%;
   min-width: 8rem;
+}
+.material-symbols-outlined a {
+  background-color: white;
+  font-size: 3rem !important;
 }

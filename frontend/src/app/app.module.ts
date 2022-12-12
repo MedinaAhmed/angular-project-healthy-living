@@ -32,6 +32,7 @@ import { OrderTrackingPageComponent } from './components/pages/order-tracking-pa
 import { FooterComponent } from './components/partials/footer/footer.component';
 import { ProfilePageComponent } from './components/pages/profile-page/profile-page.component';
 import { NgImageSliderModule } from 'ng-image-slider';
+import { MatBadgeModule } from '@angular/material/badge';
 
 @NgModule({
   declarations: [
@@ -67,6 +68,7 @@ import { NgImageSliderModule } from 'ng-image-slider';
     HttpClientModule,
     ReactiveFormsModule,
     NgImageSliderModule,
+    MatBadgeModule,
 
     ToastrModule.forRoot({
       timeOut: 3000,

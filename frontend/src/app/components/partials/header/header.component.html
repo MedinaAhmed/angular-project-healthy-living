@@ -3,8 +3,8 @@
     <a routerLink="/" class="logo"
       ><img
         src="../../../../assets/healthy-living-logo-min.png"
-        height="75px"
-        width="200px"
+        height="65px"
+        width="173px"
         alt="healthy-living"
     /></a>
 
@@ -21,9 +21,17 @@
           </div>
         </li>
         <li>
-          <a routerLink="/cart-page"
-            >Cart <span *ngIf="cartQuantity">{{ cartQuantity }}</span></a
+          <mat-icon
+            matBadge="{{ cartQuantity }}"
+            matBadgeColor="warn"
+            class="cart"
           >
+            <a routerLink="/cart-page"
+              ><span class="material-symbols-outlined"> shopping_cart </span>
+            </a></mat-icon
+          >
+          <!--<a routerLink="/cart-page"
+            >Cart <span *ngIf="cartQuantity">{{ cartQuantity }}</span></a-->
         </li>
       </ul>
     </nav>
