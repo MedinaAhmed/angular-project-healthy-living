@@ -1,12 +1,21 @@
 <div class="container">
   <div class="content">
-    <img
+    <!--<img
       src="https://bootdey.com/img/Content/avatar/avatar3.png"
       alt="Admin"
       class="avatar"
       width="150"
-    />
+    /> -->
     <div class="client">
+      <img
+        ngxGravatar
+        [email]="user.email"
+        [round]="true"
+        [size]="80"
+        [preferGravatar]="false"
+        fallback="mm"
+        [src]="user.email"
+      />
       <h3 class="client">Client</h3>
       <p class="name">Name: {{ user.name }}</p>
       <p class="adress">Address: {{ user.address }}</p>

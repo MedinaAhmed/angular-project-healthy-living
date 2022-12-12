@@ -33,6 +33,7 @@ import { FooterComponent } from './components/partials/footer/footer.component';
 import { ProfilePageComponent } from './components/pages/profile-page/profile-page.component';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { MatBadgeModule } from '@angular/material/badge';
+import { GravatarModule } from 'ngx-gravatar';
 
 @NgModule({
   declarations: [
@@ -69,6 +70,7 @@ import { MatBadgeModule } from '@angular/material/badge';
     ReactiveFormsModule,
     NgImageSliderModule,
     MatBadgeModule,
+    GravatarModule,
     ToastrModule.forRoot({
       timeOut: 3000,
       positionClass: 'toast-bottom-right',
