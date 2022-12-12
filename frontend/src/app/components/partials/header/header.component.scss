@@ -71,3 +71,6 @@ a span {
   background-color: white;
   font-size: 3rem !important;
 }
+.mat-badge-medium.mat-badge-overlap.mat-badge-after .mat-badge-content {
+  right: -1px;
+}
