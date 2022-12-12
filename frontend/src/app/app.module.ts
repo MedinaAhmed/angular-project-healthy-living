@@ -67,6 +67,7 @@ import { NgImageSliderModule } from 'ng-image-slider';
     HttpClientModule,
     ReactiveFormsModule,
     NgImageSliderModule,
+
     ToastrModule.forRoot({
       timeOut: 3000,
       positionClass: 'toast-bottom-right',
