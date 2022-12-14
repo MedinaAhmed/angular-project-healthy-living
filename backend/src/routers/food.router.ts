@@ -77,6 +77,7 @@ router.get(
     res.send(food);
   })
 );
+//check if the food is alredy excist
 router.post(
   "/profile",
   asyncHandler(async (req, res) => {
@@ -99,7 +100,7 @@ router.post(
       origins,
       cookTime,
     };
-
+    //save to database
     const dbFood = await FoodModel.create(newFood);
     res.send(dbFood);
   })

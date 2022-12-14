@@ -52,7 +52,8 @@ export class ProfilePageComponent implements OnInit {
   }
   submit() {
     this.isSubmitted = true;
-    if (this.addProductForm.invalid) return;
+    if (this.addProductForm.invalid)
+      return console.log('INVALID ADDPROFUCTFORM');
 
     const fv = this.addProductForm.value;
     const product: IFoodProduct = {
@@ -67,7 +68,7 @@ export class ProfilePageComponent implements OnInit {
     };
 
     this.foodService.addProduct(product).subscribe((_) => {
-      this.router.navigateByUrl(this.returnUrl);
+      this.router.navigateByUrl('/home-page');
     });
   }
 }

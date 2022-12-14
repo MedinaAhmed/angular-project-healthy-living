@@ -55,10 +55,15 @@ export class FoodService {
   addProduct(foodProduct: IFoodProduct): Observable<Food> {
     return this.http.post<Food>(PROFILE_URL, foodProduct).pipe(
       tap({
+        //happy part we have food
         next: (food: Food) => {
           this.setFoodToLocalStorage(food);
+          //notifing all observable
           this.foodSubject.next(food);
-          this.toastrService.success(`Product is add Succefully`);
+          this.toastrService.success(
+            `You add a new food`,
+            `Product is add Succefully`
+          );
         },
         error: (errorResponse) => {
           this.toastrService.error(

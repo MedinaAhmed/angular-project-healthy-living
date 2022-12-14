@@ -34,7 +34,7 @@ router.post(
     }
   })
 );
-
+//check if user exist
 router.post(
   "/register",
   asyncHandler(async (req, res) => {
