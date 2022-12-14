@@ -75,7 +75,8 @@ For building my Anlgular E-commerce website I used:
       1. Add Route
       2. Add ts
       3. Add html
-      4. Add css
+      4. Add Angular Material - Badge icon
+      5. Add css
 
 8. Not Found!
 
@@ -220,8 +221,9 @@ For building my Anlgular E-commerce website I used:
     1. Generate Component
     1. Add to routes
     1. Edit profile.component.ts
-    1. Add HTML
+    1. Add HTML- adding gravatar
     1. Add CSS
+    
 
 20. Adding Slider
 21. npm install ng-image-slider --save
