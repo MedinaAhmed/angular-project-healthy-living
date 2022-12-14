@@ -11,7 +11,8 @@ export interface Food {
   origins: string[];
   cookTime: string;
 }
-
+//defines the the structure and contents of your data
+//validate documents whenever they're created, changed, or deleted.
 export const FoodSchema = new Schema<Food>(
   {
     name: { type: String, required: true },
@@ -25,7 +26,7 @@ export const FoodSchema = new Schema<Food>(
   },
   {
     toJSON: {
-      virtuals: true,
+      virtuals: true, // id=_id
     },
     toObject: {
       virtuals: true,
