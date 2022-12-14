@@ -1,7 +1,8 @@
 import { Router } from "express";
 import { sample_foods, sample_tags } from "../data";
 import asyncHandler from "express-async-handler";
-import { FoodModel } from "../models/food.model";
+import { Food, FoodModel } from "../models/food.model";
+import { HTTP_BAD_REQUEST } from "../constans/http_status";
 const router = Router();
 router.get(
   "/seed",
@@ -76,5 +77,31 @@ router.get(
     res.send(food);
   })
 );
+router.post(
+  "/profile",
+  asyncHandler(async (req, res) => {
+    const { name, price, tags, favorite, stars, imageUrl, origins, cookTime } =
+      req.body;
+    const food = await FoodModel.findOne({ name });
+    if (food) {
+      res.status(HTTP_BAD_REQUEST).send("User is already exist, please login!");
+      return;
+    }
 
+    const newFood: Food = {
+      id: "",
+      name,
+      price,
+      tags,
+      favorite,
+      stars,
+      imageUrl,
+      origins,
+      cookTime,
+    };
+
+    const dbFood = await FoodModel.create(newFood);
+    res.send(dbFood);
+  })
+);
 export default router;

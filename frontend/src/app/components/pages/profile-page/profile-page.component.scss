@@ -13,15 +13,19 @@ body {
 .container {
   margin: 50px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 .content {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 70px;
+  padding: 50px;
   border: 2px solid #488664;
   border-radius: 10px;
+}
+.content {
+  display: inline-block;
 }
 .content p {
   font-family: "Times New Roman", Times, serif;
@@ -32,11 +36,32 @@ body {
   flex-direction: column;
   margin-left: 10px;
   padding: 5px;
+  align-items: flex-start;
 }
 img {
-  margin-left: 2px;
+  margin-left: 60px;
 }
 .client {
   margin-left: 10px;
   color: #1a202c;
+}
+.container-admin {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  border: 2px solid #488664;
+  border-radius: 10px;
+}
+h3 {
+  color: rgb(85, 84, 84);
+}
+app-title {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 620px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
 }

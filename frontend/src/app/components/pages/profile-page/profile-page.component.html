@@ -6,6 +6,7 @@
       class="avatar"
       width="150"
     /> -->
+    <app-title title="Profile"></app-title>
     <div class="client">
       <img
         ngxGravatar
@@ -20,6 +21,71 @@
       <p class="name">Name: {{ user.name }}</p>
       <p class="adress">Address: {{ user.address }}</p>
       <p class="email">Email: {{ user.email }}</p>
+      <p *ngIf="user.isAdmin" class="admin">Admin: Yes</p>
+      <p *ngIf="!user.isAdmin" class="admin">Admin: No</p>
+    </div>
+  </div>
+  <div class="container-admin">
+    <div class="admin-panel">
+      <app-title title="Admin Panel"></app-title>
+      <h3>ADD NEW PRODUCT</h3>
+      <form [formGroup]="addProductForm" (ngSubmit)="submit()">
+        <text-input
+          [control]="fc.name"
+          [showErrorsWhen]="isSubmitted"
+          label="Name"
+        >
+          `</text-input
+        >
+
+        <text-input
+          [control]="fc.price"
+          [showErrorsWhen]="isSubmitted"
+          label="Price"
+        >
+          `</text-input
+        >
+
+        <text-input
+          [control]="fc.tags"
+          [showErrorsWhen]="isSubmitted"
+          label="Tags"
+        >
+          `</text-input
+        >
+
+        <text-input
+          [control]="fc.stars"
+          [showErrorsWhen]="isSubmitted"
+          label="Stars"
+        >
+          `</text-input
+        >
+
+        <text-input
+          [control]="fc.imageUrl"
+          [showErrorsWhen]="isSubmitted"
+          label="Image URL"
+        >
+          `</text-input
+        >
+        <text-input
+          [control]="fc.origins"
+          [showErrorsWhen]="isSubmitted"
+          label="Origins"
+        >
+          `</text-input
+        >
+        <text-input
+          [control]="fc.cookTime"
+          [showErrorsWhen]="isSubmitted"
+          label="Cook Time"
+        >
+          `</text-input
+        >
+
+        <default-button text="Add Product"></default-button>
+      </form>
     </div>
   </div>
 </div>

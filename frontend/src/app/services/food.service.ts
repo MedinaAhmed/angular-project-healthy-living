@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { ToastrService } from 'ngx-toastr';
+import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { sample_foods, sample_tags } from 'src/data';
 import {
   FOOD_BY_ID_URL,
@@ -8,15 +9,20 @@ import {
   FOOD_BY_TAG_URL,
   FOOD_TAGs_URL,
   FOOD_URL,
+  PROFILE_URL,
 } from '../shared/constants/urls';
+import { IFoodProduct } from '../shared/interfaces/IFoodProduct';
 import { Food } from '../shared/models/Food';
 import { Tag } from '../shared/models/Tag';
-
+const FOOD_KEY = 'Food';
 @Injectable({
   providedIn: 'root',
 })
 export class FoodService {
-  constructor(private http: HttpClient) {}
+  private foodSubject = new BehaviorSubject<Food>(
+    this.getUserFromLocalStorage()
+  );
+  constructor(private http: HttpClient, private toastrService: ToastrService) {}
   getAll(): Observable<Food[]> {
     //get all the date will conate to mongo
     return this.http.get<Food[]>(FOOD_URL);
@@ -37,5 +43,30 @@ export class FoodService {
   // each food in separate page
   getFoodById(foodId: string): Observable<Food> {
     return this.http.get<Food>(FOOD_BY_ID_URL + foodId);
+  }
+  private setFoodToLocalStorage(food: Food) {
+    localStorage.setItem(FOOD_KEY, JSON.stringify(food));
+  }
+  private getUserFromLocalStorage(): Food {
+    const foodJson = localStorage.getItem(FOOD_KEY);
+    if (foodJson) return JSON.parse(foodJson) as Food;
+    return new Food();
+  }
+  addProduct(foodProduct: IFoodProduct): Observable<Food> {
+    return this.http.post<Food>(PROFILE_URL, foodProduct).pipe(
+      tap({
+        next: (food: Food) => {
+          this.setFoodToLocalStorage(food);
+          this.foodSubject.next(food);
+          this.toastrService.success(`Product is add Succefully`);
+        },
+        error: (errorResponse) => {
+          this.toastrService.error(
+            errorResponse.error,
+            'Creating product Failed, Try again!'
+          );
+        },
+      })
+    );
   }
 }
