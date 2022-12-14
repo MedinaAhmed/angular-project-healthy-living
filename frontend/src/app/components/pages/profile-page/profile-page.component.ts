@@ -68,7 +68,7 @@ export class ProfilePageComponent implements OnInit {
     };
 
     this.foodService.addProduct(product).subscribe((_) => {
-      this.router.navigateByUrl('/home-page');
+      this.router.navigateByUrl(this.returnUrl);
     });
   }
 }

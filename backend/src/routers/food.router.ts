@@ -79,7 +79,7 @@ router.get(
 );
 //check if the food is alredy excist
 router.post(
-  "/profile",
+  "/addProduct",
   asyncHandler(async (req, res) => {
     const { name, price, tags, favorite, stars, imageUrl, origins, cookTime } =
       req.body;
