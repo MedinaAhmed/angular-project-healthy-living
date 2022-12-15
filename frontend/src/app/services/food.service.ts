@@ -69,7 +69,7 @@ export class FoodService {
         error: (errorResponse) => {
           this.toastrService.error(
             errorResponse.error,
-            'Creating product Failed, Try again!'
+            'Adding product Failed, Try again!'
           );
         },
       })

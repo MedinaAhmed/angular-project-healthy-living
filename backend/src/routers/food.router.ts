@@ -79,7 +79,7 @@ router.get(
 );
 
 router.post(
-  "addNewProduct",
+  "/addNewProduct",
   asyncHandler(async (req, res) => {
     const { name, price, tags, favorite, stars, imageUrl, origins, cookTime } =
       req.body;
