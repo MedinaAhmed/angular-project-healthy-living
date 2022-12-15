@@ -20,7 +20,7 @@ const FOOD_KEY = 'Food';
 })
 export class FoodService {
   private foodSubject = new BehaviorSubject<Food>(
-    this.getUserFromLocalStorage()
+    this.getFoodFromLocalStorage()
   );
   constructor(private http: HttpClient, private toastrService: ToastrService) {}
   getAll(): Observable<Food[]> {
@@ -47,7 +47,7 @@ export class FoodService {
   private setFoodToLocalStorage(food: Food) {
     localStorage.setItem(FOOD_KEY, JSON.stringify(food));
   }
-  private getUserFromLocalStorage(): Food {
+  private getFoodFromLocalStorage(): Food {
     const foodJson = localStorage.getItem(FOOD_KEY);
     if (foodJson) return JSON.parse(foodJson) as Food;
     return new Food();

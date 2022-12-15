@@ -79,13 +79,13 @@ router.get(
 );
 //check if the food is alredy excist
 router.post(
-  "/",
+  "/addProductForm",
   asyncHandler(async (req, res) => {
     const { name, price, tags, favorite, stars, imageUrl, origins, cookTime } =
       req.body;
     // const food = await FoodModel.findOne({ name });
     // if (food) {
-    //   res.status(HTTP_BAD_REQUEST).send("User is already exist, please login!");
+    //   res.status(HTTP_BAD_REQUEST).send("Food is already exist, please try again!");
     //   return;
     // }
 
