@@ -25,15 +25,11 @@
       <p *ngIf="!user.isAdmin" class="admin">Admin: No</p>
     </div>
   </div>
-  <div class="container-admin">
+  <div *ngIf="user.isAdmin" class="container-admin">
     <div class="admin-panel">
       <app-title title="Admin Panel"></app-title>
       <h3>ADD NEW PRODUCT</h3>
-      <form
-        [formGroup]="addProductForm"
-        action="/addProductForm"
-        (ngSubmit)="submit()"
-      >
+      <form [formGroup]="addProductForm" (ngSubmit)="submit()">
         <text-input
           [control]="fc.name"
           [showErrorsWhen]="isSubmitted"
