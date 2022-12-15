@@ -14,4 +14,4 @@ export const ORDER_CREATE_URL = ORDER_URL + '/create';
 export const ORDER_NEW_FOR_CURRENT_USER_URL = `${ORDER_URL}/newOrderForCurrentUser`;
 export const ORDER_PAY_URL = ORDER_URL + '/pay';
 export const ORDER_TRACKING_URL = ORDER_URL + '/track/';
-export const PROFILE_URL = BASE_URL + '/profile';
+export const PROFILE_URL = BASE_URL + '/api/profile';

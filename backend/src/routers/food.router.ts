@@ -79,7 +79,7 @@ router.get(
 );
 
 router.post(
-  "/profile-page",
+  "/profile",
   asyncHandler(async (req, res) => {
     const { name, price, tags, favorite, stars, imageUrl, origins, cookTime } =
       req.body;
@@ -106,7 +106,7 @@ router.post(
     //save to database
     const dbFood = await FoodModel.create(newFood);
     res.send(dbFood);
-    console.log(`${dbFood} , errror`);
+    
   })
 );
 export default router;
