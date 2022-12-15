@@ -28,9 +28,8 @@ body {
   display: inline-block;
 }
 .content p {
-  font-family: "Times New Roman", Times, serif;
-  color: rgb(54, 53, 53);
-  border: 1px solid #488664;
+  color: rgb(70, 69, 69);
+  border: 2px solid #488664;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -70,4 +69,8 @@ app-title {
   border-radius: 5px;
   padding: 5px;
   color: white;
+}
+form input-validation {
+  display: flex;
+  flex-direction: row;
 }
