@@ -53,7 +53,7 @@ export class ProfilePageComponent implements OnInit {
   submit() {
     this.isSubmitted = true;
     if (this.addProductForm.invalid)
-      return console.log('INVALID ADDPROFUCTFORM');
+      return console.log('INVALID ADD-PRODUCT-FORM');
 
     const fv = this.addProductForm.value;
     const product: IFoodProduct = {
