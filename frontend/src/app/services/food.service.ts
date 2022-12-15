@@ -4,6 +4,7 @@ import { ToastrService } from 'ngx-toastr';
 import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { sample_foods, sample_tags } from 'src/data';
 import {
+  ADD_NEW_PRODUCT,
   FOOD_BY_ID_URL,
   FOOD_BY_SEARCH_URL,
   FOOD_BY_TAG_URL,
@@ -53,7 +54,7 @@ export class FoodService {
     return new Food();
   }
   addProduct(foodProduct: IFoodProduct): Observable<Food> {
-    return this.http.post<Food>(PROFILE_URL, foodProduct).pipe(
+    return this.http.post<Food>(ADD_NEW_PRODUCT, foodProduct).pipe(
       tap({
         //happy part we have food
         next: (food: Food) => {
